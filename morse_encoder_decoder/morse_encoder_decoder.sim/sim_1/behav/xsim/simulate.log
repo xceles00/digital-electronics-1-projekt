@@ -1,0 +1,9 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_hex_7seg/p_stimulus  File: C:/Users/xceles00/Documents/digital-electronics-1/labs_2023/04-segment/display/display.srcs/sim_1/new/tb_hex_7seg.vhd
+ERROR: Array sizes do not match, left array has 5 elements, right array has 4 elements
+Time: 215 ns  Iteration: 0  Process: /tb_hex_7seg/p_stimulus
+  File: C:/Users/xceles00/Documents/digital-electronics-1/labs_2023/04-segment/display/display.srcs/sim_1/new/tb_hex_7seg.vhd
+
+HDL Line: C:/Users/xceles00/Documents/digital-electronics-1/labs_2023/04-segment/display/display.srcs/sim_1/new/tb_hex_7seg.vhd:69
