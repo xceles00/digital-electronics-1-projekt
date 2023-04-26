@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a50ticsg324-1L
 
@@ -87,8 +88,10 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  C:/Users/xceles00/Documents/digital-electronics-1/labs_2023/07-display_driver/display_driver/display_driver.srcs/sources_1/new/hex_7seg.vhd
-  C:/Users/xceles00/Documents/digital-electronics-1/labs_2023/04-segment/display/display.srcs/sources_1/new/top.vhd
+  C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/imports/labs_2023/07-display_driver/display_driver/display_driver.srcs/sources_1/new/clock_enable.vhd
+  C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/imports/labs_2023/07-display_driver/display_driver/display_driver.srcs/sources_1/new/hex_7seg.vhd
+  C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/new/encoder.vhd
+  C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/imports/labs_2023/04-segment/display/display.srcs/sources_1/new/top.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -99,8 +102,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/xceles00/Documents/digital-electronics-1/labs_2023/04-segment/display/display.srcs/constrs_1/new/Nexys A7-50T.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/xceles00/Documents/digital-electronics-1/labs_2023/04-segment/display/display.srcs/constrs_1/new/Nexys A7-50T.xdc}}]
+read_xdc {{C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/constrs_1/imports/new/Nexys A7-50T.xdc}}
+set_property used_in_implementation false [get_files {{C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/constrs_1/imports/new/Nexys A7-50T.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

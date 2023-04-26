@@ -123,6 +123,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 1
+  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a50ticsg324-1L
   set_property board_part digilentinc.com:nexys-a7-50t:part0:1.2 [current_project]
@@ -138,7 +139,7 @@ OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.runs/synth_1/top.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc {{C:/Users/xceles00/Documents/digital-electronics-1/labs_2023/04-segment/display/display.srcs/constrs_1/new/Nexys A7-50T.xdc}}
+  read_xdc {{C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/constrs_1/imports/new/Nexys A7-50T.xdc}}
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

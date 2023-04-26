@@ -36,15 +36,15 @@ entity encoder is
     Port ( SW : in STD_LOGIC_VECTOR (4 downto 0);
            LED : out STD_LOGIC;
            rst : in STD_LOGIC;
-           clk : in STD_LOGIC;
-           blank : in STD_LOGIC);
+           clk_out : in STD_LOGIC
+           );
            
 end encoder;
 
 architecture Behavioral of encoder is
 
 -- Local delay counter
-  signal sig_cnt : unsigned(4 downto 0);
+  signal sig_cnt : integer;
   signal sig_en : std_logic;
 
   -- Specific values for local counter
@@ -64,57 +64,78 @@ clk_en0 : entity work.clock_enable
       g_MAX => 25000000
     )
     port map (
-      clk => clk,
+      clk => clk_out,
       rst => rst,
       ce  => sig_en
     );
 
-p_encoder : process (SW, blank) is
-    variable morse : string(1 to 4);
-begin
-    if rst = '1' then
-        LED <= '0';
-    elsif blank = '1' then
-        LED <= '0';
-    else
-        case SW is
-            when "00001" =>  -- A
-                if (sig_cnt = 0) then
-                    LED <= '1';
-                    sig_cnt <= sig_cnt + 1;
-                else
-                     sig_cnt   <= (others => '0');
-                end if;
-                if (sig_cnt = 1) then
-                    LED <= '0';
-                    sig_cnt <= sig_cnt + 1;
-                else
-                    sig_cnt   <= (others => '0');
-                end if;
-                   if (sig_cnt = 2) then
-                     LED <= '1';
-                        sig_cnt <= sig_cnt + 1;
-                   else
-                        sig_cnt   <= (others => '0');
-                 end if;
-                   if (sig_cnt = 3) then
-                     LED <= '1';
-                        sig_cnt <= sig_cnt + 1;
-                   else
-                        sig_cnt   <= (others => '0');
-                  end if;
-                   if (sig_cnt = 4) then
-                     LED <= '1';
-                        sig_cnt <= sig_cnt + 1;
-                   else
-                        sig_cnt   <= (others => '0');
-                   end if;
-                LED <= '0';
-            when others =>
-                LED <= '1';
-                
-        end case;
 
+p_encoder : process (clk_out) is
+
+begin
+    if rising_edge(clk_out) then
+        if rst = '1' then
+            LED <= '0';
+            sig_cnt <= 0;
+        --elsif blank = '1' then
+            --LED <= '0';
+            --sig_cnt <= 0;
+        elsif SW = "00001" then -- A
+            case sig_cnt is
+                when 0 =>
+                    LED <= '1';
+                    sig_cnt <= 1;
+                when 1 =>
+                    LED <= '0';
+                    sig_cnt <= 2;
+                when 2 =>
+                    LED <= '1';
+                    sig_cnt <= 3;
+                when 3 =>
+                    LED <= '1';
+                    sig_cnt <= 4;
+                when 4 =>
+                    LED <= '1';
+                    sig_cnt <= 0;
+                when others =>
+                    LED <= '0';
+            end case;
+        elsif SW = "00010" then -- B
+            case sig_cnt is
+                when 0 =>
+                    LED <= '1';
+                    sig_cnt <= 1;
+                when 1 =>
+                    LED <= '1';
+                    sig_cnt <= 2;
+                when 2 =>
+                    LED <= '1';
+                    sig_cnt <= 3;
+                when 3 =>
+                    LED <= '0';
+                    sig_cnt <= 4;
+                when 4 =>
+                    LED <= '1';
+                    sig_cnt <= 5;
+                when 5 =>
+                    LED <= '0';
+                    sig_cnt <= 6;
+                when 6 =>
+                    LED <= '1';
+                    sig_cnt <= 7;
+                when 7 =>
+                    LED <= '0';
+                    sig_cnt <= 8;
+                when 8 =>
+                    LED <= '1';
+                    sig_cnt <= 0;
+                when others =>
+                    LED <= '0';
+            end case;
+        else
+            LED <= '1';
+            sig_cnt <= 0;
+        end if;
     end if;
 end process;
 

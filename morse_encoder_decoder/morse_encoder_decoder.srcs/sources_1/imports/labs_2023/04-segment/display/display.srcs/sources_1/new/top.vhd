@@ -42,7 +42,9 @@ entity top is
            CF : out STD_LOGIC;
            CG : out STD_LOGIC;
            AN : out STD_LOGIC_VECTOR (7 downto 0);
-           BTNC : in STD_LOGIC);
+           BTNC : in STD_LOGIC;
+           CLK100MHZ : in STD_LOGIC;
+           blank : in STD_LOGIC);
 end top;
 
 architecture behavioral of top is
@@ -54,14 +56,15 @@ begin
         port map (
             SW => SW,
             LED => LED,
-            rst => BTNC
-            );
+            rst => BTNC,
+            clk_out => CLK100MHZ
+                        );
   --------------------------------------------------------------------
   -- Instance (copy) of hex_7seg entity
   --------------------------------------------------------------------
   hex2seg : entity work.hex_7seg
     port map (
-      blank  => BTNC,
+      blank => blank,
       hex    => SW,
       seg(6) => CA,
       seg(5) => CB,
