@@ -36,7 +36,7 @@ entity encoder is
     Port ( SW : in STD_LOGIC_VECTOR (4 downto 0);
            LED : out STD_LOGIC;
            rst : in STD_LOGIC;
-           clk_out : in STD_LOGIC
+           clk : in STD_LOGIC
            );
            
 end encoder;
@@ -64,22 +64,19 @@ clk_en0 : entity work.clock_enable
       g_MAX => 25000000
     )
     port map (
-      clk => clk_out,
-      rst => rst,
-      ce  => sig_en
+      clk => clk,
+      ce  => sig_en,
+      rst => rst
     );
 
 
-p_encoder : process (clk_out) is
+p_encoder : process (clk) is
 
 begin
-    if rising_edge(clk_out) then
+    if rising_edge(clk) then
         if rst = '1' then
             LED <= '0';
             sig_cnt <= 0;
-        --elsif blank = '1' then
-            --LED <= '0';
-            --sig_cnt <= 0;
         elsif SW = "00001" then -- A
             case sig_cnt is
                 when 0 =>
@@ -96,7 +93,16 @@ begin
                     sig_cnt <= 4;
                 when 4 =>
                     LED <= '1';
-                    sig_cnt <= 0;
+                    sig_cnt <= 5;
+               when 5 =>
+                    LED <= '0';
+                    sig_cnt <= 6;
+               when 6 =>
+                    LED <= '0';
+                    sig_cnt <= 7;
+               when 7 =>
+                    LED <= '0';
+                    sig_cnt <= 8;
                 when others =>
                     LED <= '0';
             end case;

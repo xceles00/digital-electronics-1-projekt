@@ -36,11 +36,10 @@ entity tb_encoder is
 end tb_encoder;
 
 architecture Behavioral of tb_encoder is
-constant c_CLK_100MHZ_PERIOD : time := 10 ns;
+constant c_CLK_100MHZ_PERIOD : time :=  250ms;
 signal sig_rst : std_logic;
 signal sig_SW : std_logic_vector(4 downto 0);
 signal sig_LED : std_logic;
-signal sig_blank : std_logic;
 signal sig_clk_100mhz : std_logic;
 
 begin
@@ -50,18 +49,34 @@ uut_encoder : entity work.encoder
       SW => sig_SW,
       rst => sig_rst,
       LED => sig_LED,
-      blank => sig_blank,
       clk => sig_clk_100mhz
+      
     );
+    
+p_clk_gen : process is
+  begin
+
+    while now < 25000ms loop -- 10 usec of simulation
+
+      sig_clk_100mhz <= '0';
+      wait for c_CLK_100MHZ_PERIOD / 2;
+      sig_clk_100mhz <= '1';
+      wait for c_CLK_100MHZ_PERIOD / 2;
+
+    end loop;
+
+    wait;
+
+  end process p_clk_gen;
 
 p_reset_gen : process is
   
   begin
 
     sig_rst <= '0';
-    wait for 14 ns;
+    wait for 100 ms;
     sig_rst <= '1';
-    wait for 28 ns;
+    wait for 200 ms;
     sig_rst <= '0';
 
     wait;

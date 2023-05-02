@@ -57,7 +57,13 @@ begin
             SW => SW,
             LED => LED,
             rst => BTNC,
-            clk_out => CLK100MHZ
+            clk => CLK100MHZ
+                        );
+                        
+  divider : entity work.digi_clk
+  port map (
+          
+            clk => CLK100MHZ
                         );
   --------------------------------------------------------------------
   -- Instance (copy) of hex_7seg entity

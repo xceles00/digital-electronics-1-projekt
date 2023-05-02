@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Wed Apr 26 16:30:27 2023
+| Date             : Tue May  2 15:58:49 2023
 | Host             : PC-634 running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 5.605        |
+| Total On-Chip Power (W)  | 5.606        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 5.530        |
+| Dynamic (W)              | 5.531        |
 | Device Static (W)        | 0.075        |
 | Effective TJA (C/W)      | 4.8          |
 | Max Ambient (C)          | 73.2         |
@@ -57,10 +57,10 @@ Table of Contents
 |   BUFG         |     0.005 |        1 |        32 |            3.13 |
 |   Register     |    <0.001 |        5 |     65200 |           <0.01 |
 |   Others       |     0.000 |        3 |       --- |             --- |
-| Signals        |     0.081 |       25 |       --- |             --- |
+| Signals        |     0.082 |       25 |       --- |             --- |
 | I/O            |     5.410 |       24 |       210 |           11.43 |
 | Static Power   |     0.075 |          |           |                 |
-| Total          |     5.605 |          |           |                 |
+| Total          |     5.606 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -70,7 +70,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       0.950 |     0.171 |       0.155 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       0.950 |     0.172 |       0.156 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.210 |       0.197 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     1.525 |       1.524 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -137,8 +137,8 @@ Table of Contents
 +-----------+-----------+
 | Name      | Power (W) |
 +-----------+-----------+
-| top       |     5.530 |
-|   encoder |     0.016 |
+| top       |     5.531 |
+|   encoder |     0.017 |
 +-----------+-----------+
 
 

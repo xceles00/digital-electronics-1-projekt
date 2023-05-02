@@ -88,9 +88,10 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
+  C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/new/clock_divider.vhd
   C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/imports/labs_2023/07-display_driver/display_driver/display_driver.srcs/sources_1/new/clock_enable.vhd
-  C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/imports/labs_2023/07-display_driver/display_driver/display_driver.srcs/sources_1/new/hex_7seg.vhd
   C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/new/encoder.vhd
+  C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/imports/labs_2023/07-display_driver/display_driver/display_driver.srcs/sources_1/new/hex_7seg.vhd
   C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/imports/labs_2023/04-segment/display/display.srcs/sources_1/new/top.vhd
 }
 OPTRACE "Adding files" END { }
