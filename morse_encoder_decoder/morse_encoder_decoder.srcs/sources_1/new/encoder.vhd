@@ -220,7 +220,7 @@ begin
                     LED <= '0';
             end case;
               
-         elsif SW = "01111" then -- J .---
+         elsif SW = "01010" then -- J .---
             case sig_cnt is
                 when 0 =>
                     LED <= '0';
