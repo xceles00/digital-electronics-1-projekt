@@ -24,6 +24,7 @@ The project is about implementing morse code encoder and decoder. First we are c
    | K | 01011 | Y | 10111 |
    | L | 01100 | Z | 11000 |
    
+   <img src="images/morse_alphabet.png" alt="morse" style="width:450px;"/>
 
 ## Hardware description of demo application
 
