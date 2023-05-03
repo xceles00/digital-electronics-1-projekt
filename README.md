@@ -9,6 +9,8 @@
 
 The project is about implementing morse code encoder and decoder. First we are creating morse code encoder. Our approach to this is that we choose one letter that we want to encode by toggling the switches and the output will be LED diode that will give us the morse code. So input will be 5-bit switch that will represent each letter by its serial number in the alphabet. 
 
+### Alphabet represented in 5-bit binary
+
 | **Character** | **5-bit value** | **Character** | **5-bit value** |
    | :-: | :-: | :-: | :-: |
    | A | 00001 | M | 01101 |
