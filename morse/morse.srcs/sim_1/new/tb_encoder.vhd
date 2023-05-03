@@ -41,6 +41,7 @@ signal sig_rst : std_logic;
 signal sig_SW : std_logic_vector(4 downto 0);
 signal sig_LED : std_logic;
 signal sig_clk_100mhz : std_logic;
+signal ce : std_logic;
 
 begin
 
@@ -49,7 +50,8 @@ uut_encoder : entity work.encoder
       SW => sig_SW,
       rst => sig_rst,
       LED => sig_LED,
-      clk => sig_clk_100mhz
+      clk => sig_clk_100mhz,
+      ce => ce
       
     );
     
