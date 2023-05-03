@@ -1,8 +1,0 @@
-0.7
-2020.2
-Oct 14 2022
-05:20:55
-C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sim_1/new/tb_encoder.vhd,1683110294,vhdl,,,,tb_encoder,,,,,,,,
-C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/imports/labs_2023/07-display_driver/display_driver/display_driver.srcs/sources_1/new/clock_enable.vhd,1683104993,vhdl,C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/new/encoder.vhd,,,clock_enable,,,,,,,,
-C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/new/clock_divider.vhd,1683104993,vhdl,,,,digi_clk,,,,,,,,
-C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sources_1/new/encoder.vhd,1683110201,vhdl,C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sim_1/new/tb_encoder.vhd,,,encoder,,,,,,,,
