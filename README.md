@@ -50,4 +50,5 @@ Put flowchats/state diagrams of your algorithm(s) and direct links to source/tes
 
 ## Refenrences
 
-- [digital-electronics-1 course](https://github.com/tomas-fryza/digital-electronics-1/labs)
+- [digital-electronics-1 course](https://github.com/tomas-fryza/digital-electronics-1/tree/master/labs)
+- https://en.wikipedia.org/wiki/Morse_code
