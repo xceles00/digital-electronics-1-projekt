@@ -215,6 +215,9 @@ begin
                     sig_cnt <= 10;
                 when 10 =>
                     LED <= '1';
+                    sig_cnt <= 11;
+                when 11 =>
+                    LED <= '0';
                     sig_cnt <= 0;
                 when others =>
                     LED <= '0';
@@ -257,7 +260,10 @@ begin
                     sig_cnt <= 11;
                 when 11 =>
                     LED <= '1';
-                    sig_cnt <= 0;              
+                    sig_cnt <= 12;
+                when 12 =>
+                    LED <= '0';
+                    sig_cnt <= 0; 
                 when others =>
                     LED <= '0';
             end case;
