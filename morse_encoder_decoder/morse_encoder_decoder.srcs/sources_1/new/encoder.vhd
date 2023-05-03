@@ -1,3 +1,4 @@
+
 ----------------------------------------------------------------------------------
 -- Company: 
 -- Engineer: 
@@ -52,8 +53,14 @@ architecture Behavioral of encoder is
   constant c_DASH_750ms : unsigned(4 downto 0) := b"0_1000"; --! 2-second delay
   constant c_SPACE_250ms : unsigned(4 downto 0) := b"0_0100"; --! 1-second delay
 
+component digi_clk
+  	port (clk_in : in STD_LOGIC;
+  		 clk_out: out STD_LOGIC);
+  end component;
 
 begin
+  
+clk_div : dig_clk port map (clk, clk_new);
 
 clk_en0 : entity work.clock_enable
     generic map (
@@ -77,7 +84,7 @@ begin
         if rst = '1' then
             LED <= '0';
             sig_cnt <= 0;
-        elsif SW = "00001" then -- A
+        elsif SW = "00001" then -- A .-
             case sig_cnt is
                 when 0 =>
                     LED <= '1';
@@ -106,7 +113,8 @@ begin
                 when others =>
                     LED <= '0';
             end case;
-        elsif SW = "00010" then -- B
+              
+        elsif SW = "00010" then -- B -...
             case sig_cnt is
                 when 0 =>
                     LED <= '1';
@@ -138,6 +146,121 @@ begin
                 when others =>
                     LED <= '0';
             end case;
+              
+         elsif SW = "01000" then -- H ....
+            case sig_cnt is
+                when 0 =>
+                    LED <= '1';
+                    sig_cnt <= 1;
+                when 1 =>
+                    LED <= '0';
+                    sig_cnt <= 2;
+                when 2 =>
+                    LED <= '1';
+                    sig_cnt <= 3;
+                when 3 =>
+                    LED <= '0';
+                    sig_cnt <= 4;
+                when 4 =>
+                    LED <= '1';
+                    sig_cnt <= 5;
+                when 5 =>
+                    LED <= '0';
+                    sig_cnt <= 6;
+                when 6 =>
+                    LED <= '1';
+                    sig_cnt <= 7;
+                when 7 =>
+                    LED <= '0';
+                    sig_cnt <= 8;
+                when 8 =>
+                    LED <= '0';
+                    sig_cnt <= 0;
+                when others =>
+                    LED <= '0';
+            end case;
+              
+         elsif SW = "01111" then -- O ---
+            case sig_cnt is
+                when 0 =>
+                    LED <= '1';
+                    sig_cnt <= 1; -- comma
+                when 1 =>
+                    LED <= '1';
+                    sig_cnt <= 2;
+                when 2 =>
+                    LED <= '1';
+                    sig_cnt <= 3; --
+                when 3 =>
+                    LED <= '0';
+                    sig_cnt <= 4; -- gap
+                when 4 =>
+                    LED <= '1';
+                    sig_cnt <= 5; -- comma
+                when 5 =>
+                    LED <= '1';
+                    sig_cnt <= 6;
+                when 6 =>
+                    LED <= '1';   --
+                    sig_cnt <= 7;
+                when 7 =>
+                    LED <= '0';		-- gap
+                    sig_cnt <= 8;
+                when 8 =>
+                    LED <= '1';
+                    sig_cnt <= 9;
+                when 9 =>
+                    LED <= '1';
+                    sig_cnt <= 10;
+                when 10 =>
+                    LED <= '1';
+                    sig_cnt <= 0;
+                when others =>
+                    LED <= '0';
+            end case;
+              
+         elsif SW = "01111" then -- J .---
+            case sig_cnt is
+                when 0 =>
+                    LED <= '0';
+                    sig_cnt <= 1; 
+                when 1 =>
+                    LED <= '1';
+                    sig_cnt <= 2;
+                when 2 =>
+                    LED <= '1';
+                    sig_cnt <= 3; 
+                when 3 =>
+                    LED <= '1';
+                    sig_cnt <= 4; 
+                when 4 =>
+                    LED <= '0';
+                    sig_cnt <= 5; 
+                when 5 =>
+                    LED <= '1';
+                    sig_cnt <= 6;
+                when 6 =>
+                    LED <= '1';   
+                    sig_cnt <= 7;
+                when 7 =>
+                    LED <= '1';		
+                    sig_cnt <= 8;
+                when 8 =>
+                    LED <= '0';
+                    sig_cnt <= 9;
+                when 9 =>
+                    LED <= '1';
+                    sig_cnt <= 10;
+                when 10 =>
+                    LED <= '1';
+                    sig_cnt <= 11;
+                when 11 =>
+                    LED <= '1';
+                    sig_cnt <= 0;              
+                when others =>
+                    LED <= '0';
+            end case;
+              
         else
             LED <= '1';
             sig_cnt <= 0;
@@ -146,3 +269,4 @@ begin
 end process;
 
 end Behavioral;
+
