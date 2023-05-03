@@ -7,7 +7,8 @@
 
 ## Theoretical description and explanation
 
-The project is about implementing morse code encoder and decoder. First we are creating morse code encoder. Our approach to this is that we choose one letter that we want to encode by toggling the switches and the output will be LED diode that will give us the morse code. So input will be 5-bit switch that will represent each letter by its serial number in the alphabet. 
+The project is about implementing morse code encoder and decoder. First we are creating morse code encoder. Our approach to this is that we choose one letter that we want to encode by toggling the switches. So input will be 5-bit switch that will represent each letter by its serial number in the alphabet. Outputs will be 7 segment display that will display a letter that will be encoded into morse code and LED diode that will represent morse code by turning on and off depending on which letter will be set by the switch. 
+Durations of each characters will be: Dot: 250 milliseconds, Dash: 750ms, Space between characters: 250ms.
 
 ### Alphabet represented in 5-bit binary
 
@@ -39,12 +40,23 @@ The project is about implementing morse code encoder and decoder. First we are c
 
 ## Software description
 
-Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders. 
+### Schematic of implementation:
 
-### Component(s) simulation
+<img src="images/schematic.png" alt="schematic" />
 
-Write descriptive text and simulation screenshots of your components.
+## Component(s) simulation
 
-## Instructions
+### Simulation of encoding a word "AHOJ":
 
-Write an instruction manual for your application, including photos or a link to a video.
+<img src="images/simulation1.png" alt="simulation_encoder" />
+
+## Refenrences
+
+- [digital-electronics-1 course](https://github.com/tomas-fryza/digital-electronics-1/tree/master/labs)
+- https://en.wikipedia.org/wiki/Morse_code
+
+
+
+
+
+
