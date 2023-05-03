@@ -1,136 +1,67 @@
 #-----------------------------------------------------------
-# Vivado v2022.2 (64-bit)
-# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
-# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed May  3 11:12:06 2023
-# Process ID: 7544
-# Current directory: C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6208 C:\Users\jehli\digital-electronics-1-projekt\morse_encoder_decoder\morse_encoder_decoder.xpr
-# Log file: C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/vivado.log
-# Journal file: C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder\vivado.jou
-# Running On: ACER-Max, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16965 MB
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed May  3 15:14:03 2023
+# Process ID: 2520
+# Current directory: C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2452 C:\Users\xceles00\Documents\digital-electronics-1-projekt\morse_encoder_decoder\morse_encoder_decoder.xpr
+# Log file: C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/vivado.log
+# Journal file: C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.xpr
+open_project C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.xpr
 update_compile_order -fileset sources_1
+save_project_as morse C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse -force
+launch_simulation
+source tb_encoder.tcl
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+reset_run synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
-set_property top encoder [current_fileset]
+set_property top top [current_fileset]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sources_1
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-set_property -name {xsim.simulate.runtime} -value {15s} -objects [get_filesets sim_1]
-set_property dataflow_viewer_settings "min_width=16"   [current_fileset]
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-update_compile_order -fileset sources_1
-close_sim
-launch_simulation
-launch_simulation
-source tb_encoder.tcl
-update_compile_order -fileset sources_1
-set_property -name {xsim.simulate.runtime} -value {20s} -objects [get_filesets sim_1]
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-close_sim
-launch_simulation
-source tb_encoder.tcl
-reset_run synth_1
-launch_runs impl_1 -jobs 4
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
 wait_on_run impl_1
-open_run impl_1
-close_sim
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse/morse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse/morse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+close_hw_manager
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse/morse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse/morse.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+close_hw_manager
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
