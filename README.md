@@ -1,7 +1,7 @@
 # digital-electronics-1-projekt
 ### Team members
 
-* Bořvoj Kramný (responsible for coding)
+* Bořivoj Kramný (responsible for coding)
 * Maxim Jehlička (responsible for coding)
 * Peter Čeleš (responsible for coding, github)
 
