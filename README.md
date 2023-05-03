@@ -45,7 +45,7 @@ Put flowchats/state diagrams of your algorithm(s) and direct links to source/tes
 
 ### Simulation of encoding a word "AHOJ":
 
-<img src="images/simulation.png" alt="simulation_encoder" />
+<img src="images/simulation1.png" alt="simulation_encoder" />
 
 ## Instructions
 
