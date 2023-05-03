@@ -40,7 +40,9 @@ Durations of each characters will be: Dot: 250 milliseconds, Dash: 750ms, Space 
 
 ## Software description
 
-Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders. 
+### Schematic of implementation:
+
+<img src="images/schematic.png" alt="schematic" />
 
 ## Component(s) simulation
 
