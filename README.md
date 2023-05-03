@@ -7,7 +7,8 @@
 
 ## Theoretical description and explanation
 
-The project is about implementing morse code encoder and decoder. First we are creating morse code encoder. Our approach to this is that we choose one letter that we want to encode by toggling the switches. So input will be 5-bit switch that will represent each letter by its serial number in the alphabet. Output will be LED diode that will turn on and off depending on which letter will be set by the switch. Duration of each characters will be: Dot: 250 milliseconds, Dash: 750ms, Space between characters: 250ms.
+The project is about implementing morse code encoder and decoder. First we are creating morse code encoder. Our approach to this is that we choose one letter that we want to encode by toggling the switches. So input will be 5-bit switch that will represent each letter by its serial number in the alphabet. Outputs will be 7 segment display that will display a letter that will be encoded into morse code and LED diode that will represent morse code by turning on and off depending on which letter will be set by the switch. 
+Durations of each characters will be: Dot: 250 milliseconds, Dash: 750ms, Space between characters: 250ms.
 
 ### Alphabet represented in 5-bit binary
 
