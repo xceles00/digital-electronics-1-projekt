@@ -1,31 +1,18 @@
 #-----------------------------------------------------------
-# Vivado v2020.2 (64-bit)
-# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Apr 19 15:14:16 2023
-# Process ID: 11684
-# Current directory: C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11644 C:\Users\xceles00\Documents\digital-electronics-1-projekt\morse_encoder_decoder\morse_encoder_decoder.xpr
-# Log file: C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/vivado.log
-# Journal file: C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder\vivado.jou
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed May  3 11:12:06 2023
+# Process ID: 7544
+# Current directory: C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6208 C:\Users\jehli\digital-electronics-1-projekt\morse_encoder_decoder\morse_encoder_decoder.xpr
+# Log file: C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/vivado.log
+# Journal file: C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder\vivado.jou
+# Running On: ACER-Max, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 16965 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.xpr
+open_project C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.xpr
 update_compile_order -fileset sources_1
-file mkdir C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sim_1/new/tb_encoder.vhd w ]
-add_files -fileset sim_1 C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.srcs/sim_1/new/tb_encoder.vhd
-update_compile_order -fileset sim_1
-launch_simulation
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top tb_encoder [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sim_1
-launch_simulation
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
 set_property top encoder [current_fileset]
@@ -33,17 +20,69 @@ set_property top encoder [current_fileset]
 set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sources_1
 launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
 source tb_encoder.tcl
-set_property -name {xsim.simulate.runtime} -value {10s} -objects [get_filesets sim_1]
 close_sim
 launch_simulation
 source tb_encoder.tcl
-set_property -name {xsim.simulate.runtime} -value {1000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_encoder.tcl
+set_property -name {xsim.simulate.runtime} -value {15s} -objects [get_filesets sim_1]
+set_property dataflow_viewer_settings "min_width=16"   [current_fileset]
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
 close_sim
 launch_simulation
 source tb_encoder.tcl
@@ -51,6 +90,46 @@ update_compile_order -fileset sources_1
 close_sim
 launch_simulation
 launch_simulation
+source tb_encoder.tcl
+update_compile_order -fileset sources_1
+set_property -name {xsim.simulate.runtime} -value {20s} -objects [get_filesets sim_1]
+close_sim
 launch_simulation
-import_files C:/Users/xceles00/Documents/digital-electronics-1/labs_2023/07-display_driver/display_driver/display_driver.srcs/sources_1/new/driver_7seg_4digits.vhd
-import_files
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+close_sim
+launch_simulation
+source tb_encoder.tcl
+reset_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+open_run impl_1

@@ -61,7 +61,7 @@ component digi_clk
 
 begin
   
-clk_div : dig_clk port map (clk, clk_new);
+--clk_div : digi_clk port map (clk_in=>clk, clk_out=>clk_new);
 
 clk_en0 : entity work.clock_enable
     generic map (
@@ -143,12 +143,15 @@ begin
                     sig_cnt <= 8;
                 when 8 =>
                     LED <= '1';
-                    sig_cnt <= 0;
+                    sig_cnt <= 9;
+                when 9 =>
+                    LED <= '0';
+                    sig_cnt <= 10;
                 when others =>
                     LED <= '0';
             end case;
               
-         elsif SW = "01000" then -- H ....
+        elsif SW = "01000" then -- H ....
             case sig_cnt is
                 when 0 =>
                     LED <= '1';
@@ -176,12 +179,12 @@ begin
                     sig_cnt <= 8;
                 when 8 =>
                     LED <= '0';
-                    sig_cnt <= 0;
+                    sig_cnt <= 9;
                 when others =>
                     LED <= '0';
             end case;
               
-         elsif SW = "01111" then -- O ---
+elsif SW = "01111" then -- O ---
             case sig_cnt is
                 when 0 =>
                     LED <= '1';
@@ -215,18 +218,21 @@ begin
                     sig_cnt <= 10;
                 when 10 =>
                     LED <= '1';
-                    sig_cnt <= 0;
+                    sig_cnt <= 11;
+                when 11 =>
+                    LED <= '0';
+                    sig_cnt <= 12;
                 when others =>
                     LED <= '0';
             end case;
               
-         elsif SW = "01010" then -- J .---
+        elsif SW = "01010" then -- J .---
             case sig_cnt is
                 when 0 =>
-                    LED <= '0';
+                    LED <= '1';
                     sig_cnt <= 1; 
                 when 1 =>
-                    LED <= '1';
+                    LED <= '0';
                     sig_cnt <= 2;
                 when 2 =>
                     LED <= '1';
@@ -235,10 +241,10 @@ begin
                     LED <= '1';
                     sig_cnt <= 4; 
                 when 4 =>
-                    LED <= '0';
+                    LED <= '1';
                     sig_cnt <= 5; 
                 when 5 =>
-                    LED <= '1';
+                    LED <= '0';
                     sig_cnt <= 6;
                 when 6 =>
                     LED <= '1';   
@@ -247,17 +253,23 @@ begin
                     LED <= '1';		
                     sig_cnt <= 8;
                 when 8 =>
-                    LED <= '0';
+                    LED <= '1';
                     sig_cnt <= 9;
                 when 9 =>
-                    LED <= '1';
+                    LED <= '0';
                     sig_cnt <= 10;
                 when 10 =>
                     LED <= '1';
                     sig_cnt <= 11;
                 when 11 =>
                     LED <= '1';
-                    sig_cnt <= 0;              
+                    sig_cnt <= 12;
+                when 12 =>
+                    LED <= '1';
+                    sig_cnt <= 13; 
+                when 13 =>
+                    LED <= '0';
+                    sig_cnt <= 14;
                 when others =>
                     LED <= '0';
             end case;

@@ -3,7 +3,7 @@
 # 
 # Vivado(TM)
 # runme.sh: a Vivado-generated Runs Script for UNIX
-# Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+# Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 # 
 
 echo "This script was generated under a different operating system."
@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=C:/appz/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/nt64;C:/appz/Xilinx/Vivado/2020.2/ids_lite/ISE/lib/nt64:C:/appz/Xilinx/Vivado/2020.2/bin
+  PATH=C:/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2022.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2022.2/bin
 else
-  PATH=C:/appz/Xilinx/Vivado/2020.2/ids_lite/ISE/bin/nt64;C:/appz/Xilinx/Vivado/2020.2/ids_lite/ISE/lib/nt64:C:/appz/Xilinx/Vivado/2020.2/bin:$PATH
+  PATH=C:/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2022.2/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2022.2/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/xceles00/Documents/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.runs/impl_1'
+HD_PWD='C:/Users/jehli/digital-electronics-1-projekt/morse_encoder_decoder/morse_encoder_decoder.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+EAStep vivado -log encoder.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source encoder.tcl -notrace
 
 

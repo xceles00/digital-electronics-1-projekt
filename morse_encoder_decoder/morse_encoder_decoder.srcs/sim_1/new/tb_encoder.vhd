@@ -78,6 +78,18 @@ p_reset_gen : process is
     sig_rst <= '1';
     wait for 200 ms;
     sig_rst <= '0';
+    wait for 4700ms;
+    sig_rst <= '1';
+    wait for 200ms;
+    sig_rst <= '0';
+    wait for 4800ms;
+    sig_rst <= '1';
+    wait for 200ms;
+    sig_rst <= '0';
+    wait for 4800ms;
+    sig_rst <= '1';
+    wait for 200ms;
+    sig_rst <= '0';
 
     wait;
 
@@ -91,8 +103,11 @@ p_stimulus : process is
     -- WRITE YOUR CODE HERE AND TEST INPUT VALUE
    
     sig_SW <= "00001";
+    wait for 5000 ms;
     sig_SW <= "01000";
+    wait for 5000 ms;
     sig_SW <= "01111";
+    wait for 5000 ms;
     sig_SW <= "01010";
 
     report "Stimulus process finished";
