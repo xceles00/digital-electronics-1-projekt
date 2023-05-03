@@ -32,9 +32,9 @@ The project is about implementing morse code encoder and decoder. First we are c
 
 ## Hardware description of demo application
 
-<img src="images/7seg_rgb" alt="hardware" style="width:450px;"/>
+<img src="images/7seg_rgb.png" alt="hardware" style="width:450px;"/>
 
-<img src="images/n4r" alt="hardware" style="width:450px;"/>
+<img src="images/n4r.png" alt="hardware" style="width:450px;"/>
 
 ## Software description
 
