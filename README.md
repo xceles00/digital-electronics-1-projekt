@@ -48,6 +48,6 @@ Put flowchats/state diagrams of your algorithm(s) and direct links to source/tes
 
 <img src="images/simulation1.png" alt="simulation_encoder" />
 
-## Instructions
+## Refenrences
 
-Write an instruction manual for your application, including photos or a link to a video.
+- [digital-electronics-1 course](https://github.com/tomas-fryza/digital-electronics-1/labs)
