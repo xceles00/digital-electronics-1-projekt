@@ -70,7 +70,7 @@ clk_en0 : entity work.clock_enable
       -- FOR IMPLEMENTATION, CALCULATE VALUE: 250 ms / (1/100 MHz)
        --1   @ 0,000 010 ms
        --@ 250 ms
-      g_MAX => 25000000
+      g_MAX => 5
     )
     port map (
       ce  => sig_en,
@@ -83,7 +83,7 @@ p_encoder : process (clk) is
 
 begin
     if rising_edge(clk) then
-        if ce = '1' then
+        --if ce = '1' then
         if rst = '1' then
             LED <= '0';
             sig_cnt <= 0;
@@ -281,7 +281,7 @@ elsif SW = "01111" then -- O ---
             sig_cnt <= 0;
         end if;
     end if;
-    end if;
+    --end if;
 end process;
 
 end Behavioral;
