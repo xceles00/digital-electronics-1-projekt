@@ -91,6 +91,9 @@ p_stimulus : process is
     -- WRITE YOUR CODE HERE AND TEST INPUT VALUE
    
     sig_SW <= "00001";
+    sig_SW <= "01000";
+    sig_SW <= "01111";
+    sig_SW <= "01010";
 
     report "Stimulus process finished";
     wait;
