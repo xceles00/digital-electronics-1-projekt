@@ -41,9 +41,11 @@ The project is about implementing morse code encoder and decoder. First we are c
 
 Put flowchats/state diagrams of your algorithm(s) and direct links to source/testbench files in `src` and `sim` folders. 
 
-### Component(s) simulation
+## Component(s) simulation
 
-Write descriptive text and simulation screenshots of your components.
+### Simulation of encoding a word "AHOJ":
+
+<img src="images/simulation.png" alt="simulation_encoder" />
 
 ## Instructions
 
