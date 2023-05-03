@@ -28,13 +28,13 @@ The project is about implementing morse code encoder and decoder. First we are c
    
    ### Morse alphabet
    
-   <img src="morse_alphabet.png" alt="morse" style="width:450px;"/>
+   <img src="images/morse_alphabet.png" alt="morse" style="width:450px;"/>
 
 ## Hardware description of demo application
 
-<img src=images/"7seg_rgb" alt="hardware" style="width:450px;"/>
+<img src="images/7seg_rgb" alt="hardware" style="width:450px;"/>
 
-<img src=images/"n4r" alt="hardware" style="width:450px;"/>
+<img src="images/n4r" alt="hardware" style="width:450px;"/>
 
 ## Software description
 
