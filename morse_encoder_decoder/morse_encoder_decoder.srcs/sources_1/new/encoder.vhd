@@ -47,6 +47,7 @@ architecture Behavioral of encoder is
 -- Local delay counter
   signal sig_cnt : integer;
   signal sig_en : std_logic;
+  signal clk_new : STD_LOGIC;
 
   -- Specific values for local counter
   constant c_DOT_250ms : unsigned(4 downto 0) := b"1_0000"; --! 4-second delay
